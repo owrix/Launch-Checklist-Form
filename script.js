@@ -8,8 +8,8 @@ window.addEventListener("load", function() {
    form.addEventListener("submit", function(event) {
       let pilotName = document.querySelector("input[name=pilotName]");
       let copilotName = document.querySelector("input[name=copilotName]");
-      let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
-      let cargoMassInput = document.querySelector("input[name=cargoMass]");
+      let fuelLevel = document.querySelector("input[name=fuelLevel]");
+      let cargoMass = document.querySelector("input[name=cargoMass]");
       //finding paths
       console.log("with form submission");
       
@@ -17,22 +17,22 @@ window.addEventListener("load", function() {
 
       
       
-      if ((pilotName.value === '')|| (copilotName.value === '')||(fuelLevelInput.value === '') || (cargoMassInput.value === '')) {
+      if ((pilotName.value === '')|| (copilotName.value === '')||(fuelLevel.value === '') || (cargoMass.value === '')) {
          alert("Please fill out all sections");
-         event.preventDefault();}
-      // } else if((pilotName.value != string)|| (copilotName.value != string)){
-      //    alert("Enter a name for the pilot/copilot");
-      //    event.preventDefault();
-      // }
-      
+         event.preventDefault();
+      }
+      else if (isNaN(pilotName.value) === false|| isNaN(copilotName.value) === false){
+         alert("Please provide pilot/copilot name");
+         event.preventDefault();
+      }
       else {
          document.getElementById("pilotStatus").innerHTML = `${pilotName.value} is ready for launch`;
          document.getElementById("copilotStatus").innerHTML = `${copilotName.value} is ready for launch`;
          
          event.preventDefault();
       }
-   });
-})
+   ;
+})})
 
 
 /* This block of code shows how to format the HTML once you fetch some planetary JSON!
