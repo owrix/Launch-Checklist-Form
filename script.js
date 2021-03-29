@@ -29,9 +29,14 @@ window.addEventListener("load", function() {
          document.getElementById("pilotStatus").innerHTML = `${pilotName.value} is ready for launch`;
          document.getElementById("copilotStatus").innerHTML = `${copilotName.value} is ready for launch`;
          if (fuelLevel.value < 10000){
-            console.log("fuel too low");
             document.getElementById("faultyItems").style.visibility = "visible";
             document.getElementById("fuelStatus").innerHTML = `${fuelLevel.value} L of fuel is not enough, you will need 10,000 L`;
+            document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
+            document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
+         }
+         if (cargoMass.value > 10000){
+            document.getElementById("faultyItems").style.visibility = "visible";
+            document.getElementById("cargoStatus").innerHTML = `${cargoMass.value} kg of cargo is too much, it must be below 10,000 kg`;
             document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
             document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
          }
