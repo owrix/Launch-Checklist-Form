@@ -23,21 +23,29 @@ window.addEventListener("load", function() {
             document.getElementById("fuelStatus").innerHTML = `${fuelLevel.value} L of fuel is not enough, you will need 10,000 L`;
             document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
             document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
+            document.getElementById("fuelStatus").style.color = "#ff6347"; /yum/
          } else {
-            document.getElementById("fuelStatus").innerHTML = `Fuel checked, ready for launch.`;
+            document.getElementById("fuelStatus").innerHTML = `Fuel level ${fuelLevel.value} L. Ready for launch`;
+            document.getElementById("fuelStatus").style.color = "black"
             }
          if (cargoMass.value > 10000){
             document.getElementById("faultyItems").style.visibility = "visible";
             document.getElementById("cargoStatus").innerHTML = `${cargoMass.value} kg of cargo is too much, it must be below 10,000 kg`;
             document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
             document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
+            document.getElementById("cargoStatus").style.color = "#ff6347"; /yum/
          }  else {
-            document.getElementById("fuelStatus").innerHTML = `Fuel checked, ready for launch.`;
+            document.getElementById("cargoStatus").innerHTML = `Cargo level ${cargoMass.value} kg. Ready for launch`;
+            document.getElementById("cargoStatus").style.color = "black"
             }
          if (cargoMass.value <= 10000 && fuelLevel.value >= 10000){
             document.getElementById("launchStatus").innerHTML = "Shuttle ready for launch!";
             document.getElementById("launchStatus").style.color = "#33cc33"; /lets go/
-            document.getElementById("faultyItems").style.visibility = "hidden";
+            document.getElementById("fuelStatus").innerHTML = `Fuel level ${fuelLevel.value} L. Ready for launch`;
+            document.getElementById("cargoStatus").innerHTML = `Cargo level ${cargoMass.value} kg. Ready for launch`;
+            console.log(fuelStatus)
+
+            
          }
          event.preventDefault();
       }
