@@ -23,16 +23,21 @@ window.addEventListener("load", function() {
             document.getElementById("fuelStatus").innerHTML = `${fuelLevel.value} L of fuel is not enough, you will need 10,000 L`;
             document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
             document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
-         }
+         } else {
+            document.getElementById("fuelStatus").innerHTML = `Fuel checked, ready for launch.`;
+            }
          if (cargoMass.value > 10000){
             document.getElementById("faultyItems").style.visibility = "visible";
             document.getElementById("cargoStatus").innerHTML = `${cargoMass.value} kg of cargo is too much, it must be below 10,000 kg`;
             document.getElementById("launchStatus").innerHTML = "Shuttle NOT ready for launch";
             document.getElementById("launchStatus").style.color = "#ff6347"; /yum/
-         }
+         }  else {
+            document.getElementById("fuelStatus").innerHTML = `Fuel checked, ready for launch.`;
+            }
          if (cargoMass.value <= 10000 && fuelLevel.value >= 10000){
             document.getElementById("launchStatus").innerHTML = "Shuttle ready for launch!";
             document.getElementById("launchStatus").style.color = "#33cc33"; /lets go/
+            document.getElementById("faultyItems").style.visibility = "hidden";
          }
          event.preventDefault();
       }
