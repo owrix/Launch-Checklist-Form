@@ -11,35 +11,40 @@ div {
 }
 
 #launchForm {
-    background-color: #ECF0F1;
+    background-color: #85b2bd;
     text-align: center;
     margin: auto;
     width: 25%;
     border: 3px solid black;
     padding: 10px;
+    border-radius: 25px;
 }
 
 #launchStatusCheck {
-    background-color: #ECF0F1;
+    background-color: #85b2bd;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
+    border-radius: 25px;
 }
 
 #missionTarget img {
     max-width: 40%;
     max-height: 250px;
+    border-radius: 25px;
+    border: 3px solid black;
 }
 
 #missionTarget {
-    background-color: #ECF0F1;
+    background-color: #85b2bd;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
+    border-radius: 25px;
 }
 
 button {
@@ -51,3 +56,12 @@ button {
     height: 30px;
     margin: 10px 0;
 }
+
+li {
+    list-style-type: none
+}
+
+html {
+    background-color: #b9dde6;
+}
+
