@@ -1,4 +1,5 @@
 h1 {
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -6,28 +7,26 @@ div {
     text-align: left;
 }
 
+html {
+    background-color: #b9dde6;
+}
+
 #faultyItems {
     visibility: hidden;   
 }
 
-#launchForm {
-    background-color: #85b2bd;
-    text-align: center;
-    margin: auto;
-    width: 25%;
-    border: 3px solid black;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-#launchStatusCheck {
+#missionTarget {
     background-color: #85b2bd;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
-    padding: 10px;
+    padding-bottom: 11px;
     border-radius: 25px;
+}
+
+li {
+    list-style-type: none
 }
 
 #missionTarget img {
@@ -37,10 +36,10 @@ div {
     border: 3px solid black;
 }
 
-#missionTarget {
+#launchForm {
     background-color: #85b2bd;
     text-align: center;
-    margin: 50px auto;
+    margin: auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
@@ -57,11 +56,17 @@ button {
     margin: 10px 0;
 }
 
-li {
-    list-style-type: none
+#launchStatusCheck {
+    background-color: #85b2bd;
+    text-align: center;
+    margin: 50px auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 25px;
 }
 
-html {
-    background-color: #b9dde6;
-}
+
+
+
 

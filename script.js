@@ -79,7 +79,7 @@ window.addEventListener("load", function() {
             launchStatus.style.color = "#24913e"; /green/
             fuelStatus.innerHTML = `Fuel level ${fuelLevel.value} L. Ready for launch`;
             cargoStatus.innerHTML = `Cargo level ${cargoMass.value} kg. Ready for launch`;
-            console.log(fuelStatus)
+            
 
             
          }
